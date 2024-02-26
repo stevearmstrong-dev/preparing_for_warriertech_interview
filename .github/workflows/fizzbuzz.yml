@@ -25,4 +25,4 @@ jobs:
             - name: Install Dependencies
               run: npm install
             - name: Run Tests
-              run: npx jest --ci --reporters=default --reporters=jest-junit
+              run: npx jest --ci --colors --reporters=default --reporters=jest-junit
