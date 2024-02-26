@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Learning Typescript for the Interview at WarrierTech with Dev",
   "main": "coding.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/yourprojectname.git"
+  },
   "scripts": {
     "test": "jest"
   },
