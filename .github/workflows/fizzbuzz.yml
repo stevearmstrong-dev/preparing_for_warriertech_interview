@@ -22,5 +22,7 @@ jobs:
               uses: actions/setup-node@v2
               with:
                 node-version: 16.x
-            - run: npm install
-            - run: npm run test -- coding.test.ts
+            - name: Install Dependencies
+              run: npm install
+            - name: Run Tests
+              run: npx jest --ci --reporters=default --reporters=jest-junit coding.test.ts
