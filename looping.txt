@@ -1,0 +1,257 @@
+-------
+JS
+-------
+for (let i = 0; i < length; i++){
+    console.log(i);
+}
+
+----
+let i = 0;
+while (i < 10){
+    console.log(i);
+    i++;
+}
+
+---
+
+let i = 0;
+while(i < 10){
+    console.log(i);
+    i++;
+}
+
+---
+let i = 0;
+do{
+    console.log(i);
+    i++
+}
+while(i < 10);
+---
+
+-------------
+for something in -----> best to use for objects/dictionaries
+-------------
+
+const obj = { a: 1, b: 2, c: 3 };
+for ( const key in obj){
+    console.log(`${key}: ${obj[key]}`);
+}
+
+for (const key in obj){
+    console.log( `${key} : ${obj[key]}`);
+}
+
+----------------
+for something of ---> best to use for arrays, maps, sets and strings
+----------------
+const arr = [1,2,3,4,5];
+for (const val of arr){
+    console.log(val);
+}
+
+
+
+------------
+TYPESCRIPT
+------------
+
+classic for loop
+
+const arr: number[] = [1, 2, 3, 4, 5];
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+let i: number = 0;
+while ( i < 10 ) {
+    console.log(i);
+    i++;
+}
+
+let i: number = 10;
+do {
+    console.log(i);
+    i++;
+}
+while (i < 10);
+
+-------
+for in
+------
+const obj: {name: string, age: number } = {name: "Steve", age: 26};
+
+for (const key in obj){
+    console.log(`${key} : ${obj[key]}`);
+}
+
+const obj: {[key: string]: string | number } = {name: "Steve", age: 26};
+
+for (const key in obj){
+    console.log(`${key} : ${obj[key]}`);
+}
+
+-------
+for of
+-------
+
+const arr: number[] = [1, 2, 3, 4, 5];
+for (const val of arr){
+    console.log(val);
+}
+
+---------
+for each
+---------
+
+const arr: number[] = [1, 2, 3, 4, 5];
+arr.forEach((val) => {
+    console.log(val);
+});
+
+When we want to store numbers as keys that's when we use a map because by default even if we use numbers as keys in objects,
+implicitly, javascript and typescript stores them as strings.
+
+
+const map = new Map<number,string>();
+
+const map = new Map();
+
+map.set(1, "one");
+map.set(2, "two");
+map.set("3", "three");
+
+console.log(map.get(1));
+console.log(map.get("1"));
+
+
+--------------
+ASYNC/ AWAIT
+
+
+Chef and Hotel
+Javascript Engine and Computer
+
+When you are a Chef trying to make different dishes, you don't want to wait for one dish to finish completing.
+
+You want to be cooking everything and be as efficient as possible.
+
+async is like cooking the dish
+await is like you checking on the status of the dish once in a while.
+
+Promises --> The promise to complete a task (cooking the dish).
+When the promise is complete, uyou move on to the next async (task).
+
+
+1. Start a Task
+2. Do other tasks.
+3. Task Completes
+4. Do other tasks.
+5. Task completes
+6. Do other tasks.
+
+async/await is like you do certain tasks, you wait for that task to complete but you don't stop yourself from doing other tasks. You continue doing other tasks while this task is waiting and once this task is complete (Promise is resolved), you are notified of its completion and you continue with the other tasks.
+
+async function fetchData(url: string): Promise<void> {
+  try {
+    // send a network request over the internet to the specified URL, wait for the server to process the request and then send the response back.
+
+    const response = await fetch(url);
+
+    // waits for the conversion of raw data into json.
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Could not fetch data:", error);
+  }
+}
+
+fetchData('https://api.example.com/data');
+
+
+async function function_name(url: string): Promise<interface_name> {
+    try {
+        const response = await fetch(url);
+        const data: interface_name = await response.json();
+        console.log(data);
+    }
+    catch (error){
+        console.error("Could not fetch the data: ",error);
+    }
+}
+
+function_name("https://www.google.com").
+then(data =>
+{
+    console.log("Fetched data: ",data);
+})
+.catch(error => {
+    console.error("Error fetching data: ",error);
+});
+
+
+let str = "Hello, World!"
+// Finding a part of a string
+console.log(str.includes("World"));
+
+str.includes("the word you want to check");
+// replace a part of a string
+
+str.replace("World", "TypeScript");
+
+str.replace("The word you want to replace","The new word");
+
+// Upper casing the word.
+
+str.toUpperCase();
+
+let str: string = "Hello, World!"
+
+let arr: number[] = [1, 2, 3, 4, 5];
+
+let arr2: number[] = arr.map(x => x * x);
+
+console.log(arr);
+
+// Filtering out odd numbers
+
+arr.map(x => x * x);
+
+// when we are using filter, we are filtering out all the elements which fail the condition and keep the ones which pass the condition. So the new array will contain the elements which passed the condition.
+
+arr.filter(x => x % 2 === 0);
+
+// while using reduce, accumulator and current value gets added. And the initial value is set to 0.
+// The parameters contain two elements.
+
+arr.reduce((acc, current) => acc + current, 0);
+
+
+
+let map: Map<string, string> = new Map();
+map.set(`key1`: `value1`);
+map.set(`key2`: `value2`);
+
+
+// A higher order function is a function that either takes another function as an argument and/or it returns a function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

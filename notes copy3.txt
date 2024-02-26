@@ -1,0 +1,43 @@
+function function_name
+<T>(param1: T, param2: number): T[] {
+    const result: T[] = [];
+    for (let i=0;
+    )
+}
+
+this.
+
+
+
+function function_name <T> (param1: T, param2 : number)
+: T[]
+{
+    const result: T[] = [];
+    for (let i = 0; i < length; i++){
+        result.push(element);
+    }
+    return result;
+}
+
+function_name<string>("Steve",26);
+function_name<number>(26,1997);
+function_name<{name:string}>({name: "Steve", age: 26});
+
+
+// we learnt how to use generics.
+// we learnt why to use generics.
+// let's do generics now.
+
+
+function function_name<T>(element: T, length: number){
+
+    const result T[] = [];
+    for(let i = 0; i < length; i++)
+    result.push(element);
+}
+
+function_name("Steve",26);
+
+function_name({name:"Steve"},26);
+
+function_name(26, 1997);

@@ -1,0 +1,10 @@
+function isPalindrome(s) {
+    const reversed = s.split('').reverse().join('');
+    return s === reversed;
+}
+
+function isPalindrome(s: string): boolean{
+    const reversed: string = s.split('').reverse().join('');
+    return reversed === s;
+}
+

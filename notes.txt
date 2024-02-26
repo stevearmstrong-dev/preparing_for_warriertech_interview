@@ -1,0 +1,114 @@
+I don't have to have a js file with the same name since ts will first compile itself to js.
+
+And it does this by creating a js file with the same name on its own.
+----------
+VARIABLES
+----------
+//js -> We use semi colons at the end.
+
+let name = "Steve";
+let age = 26;
+let isActive = true;
+
+// ts (Data type is mentioned along with the variable name creation. We put a colon after the variable name and give it a space).
+
+let name: string = "Steve";
+let age: string = 26;
+let isActive: boolean = true;
+
+//js 
+
+-----------
+FUNCTIONS
+-----------
+
+//js
+
+function add(a, b){
+    return a + b;
+}
+
+console.log(add(3, 6));
+console.log(add("5", "6"));
+
+//ts
+
+function add(a: number, b: number): number {
+    return a+b;
+}
+
+console.log(add(5, 3));
+
+----------------------------
+
+interface Person {
+    name: string;
+    age: number;
+}
+
+function greet(person: Person){
+    return `Hello, ${person.name}`;
+}
+
+greet({name: "Steve", age: 26});
+
+
+// format
+
+interface <name_of_interface> {
+    property1: <datatype1>;
+    property2: <datatype2>;
+}
+
+// how to access this
+
+interface : <name_of_interface>
+
+function function_name(interface : <name_of_interface>) {
+    return `${interface.property1}`;
+}
+
+console.log(function_name(property1: "Steve", property2: 26));
+
+
+---------
+CLASSES
+---------
+
+class <class_name> 
+{
+    constructor (property1, property2)
+    {
+        this.property1 = property1;
+        this.property2 = property2;
+    }
+
+    function_name(){
+        return `${this.property1}`;
+    }
+}
+
+
+
+class class_name {
+    property1: string;
+    property2: number;
+
+    constructor(property1 : string, property2 : number )
+    {
+        this.property1 = property1;
+        this.property2 = property2;
+    }
+
+    function_name(): string{
+        return `${this.property1}`;
+    }
+}
+
+function add(x , y){
+    return x + y;
+}
+
+add(2, 3);
+
+

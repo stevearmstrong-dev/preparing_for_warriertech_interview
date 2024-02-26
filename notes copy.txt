@@ -1,0 +1,174 @@
+I don't have to have a js file with the same name since ts will first compile itself to js.
+
+And it does this by creating a js file with the same name on its own.
+----------
+VARIABLES
+----------
+//js -> We use semi colons at the end.
+
+let name = "Steve";
+let age = 26;
+let isActive = true;
+
+// ts (Data type is mentioned along with the variable name creation. We put a colon after the variable name and give it a space).
+
+let name: string = "Steve";
+let age: string = 26;
+let isActive: boolean = true;
+
+//js 
+
+-----------
+FUNCTIONS
+-----------
+
+//js
+
+function add(a, b){
+    return a + b;
+}
+
+console.log(add(3, 6));
+console.log(add("5", "6"));
+
+//ts
+
+function add(a: number, b: number): number {
+    return a+b;
+}
+
+console.log(add(5, 3));
+
+----------------------------
+
+interface Person {
+    name: string;
+    age: number;
+}
+
+function greet(person: Person){
+    return `Hello, ${person.name}`;
+}
+
+greet({name: "Steve", age: 26});
+
+
+// format
+
+interface <name_of_interface> {
+    property1: <datatype1>;
+    property2: <datatype2>;
+}
+
+// how to access this
+
+interface : <name_of_interface>
+
+function function_name(interface : <name_of_interface>) {
+    return `${interface.property1}`;
+}
+
+console.log(function_name(property1: "Steve", property2: 26));
+
+function function_name( interface : <interface_name> ){
+    return `${interface.property1}`
+}
+
+function_name({
+    property1 : "value1",
+    property2 : "value2" 
+})
+
+//JS
+
+class Person 
+{
+   
+
+    constructor (name, age)
+    {
+        this.name = name;
+        this.age = age; 
+    }
+
+    function_name(){
+        return `${this.name}`;  
+    }
+}
+
+//TS
+
+class Person{
+
+    name: string;
+    age: number;
+
+    constructor (name: string, age: number)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    function_name(): string {
+        return `${this.name}`
+    }
+}
+
+// you won't have to pass the properties defined in the constructor found within a class as parameters of a method.You can directly access them with the this keyword.
+
+// when it comes to an interface there is no constructor.
+
+you can access properties in the interface with 
+ the name of the interface and . operator.
+
+ Example:
+
+ For class
+ ----------
+
+class class_name{
+
+    property1: string;
+    property2: number;
+constructor(property1 : number, property2 : string){
+    this.property1 = property1;
+    this.property2 = property2;
+}
+
+ function function_name(){
+    return this.property1;
+ }
+}
+
+For interface
+--------------
+
+interface interface_name {
+    property1: string;
+    property2: number;
+}
+
+function function_name(interface1: interface_name){
+    return `${interface1.property1}`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
